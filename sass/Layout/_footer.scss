@@ -1,0 +1,35 @@
+footer
+{
+    background-color:rgb(34, 33, 33);
+    color:#fff;
+    width: 100%;
+
+    img 
+    {
+        width:25% ; 
+    filter: invert(100%);
+    }
+
+    p 
+    {   font-size: 1rem;
+        font-family:'logo',Arial, Helvetica, sans-serif;
+        margin: 0px;
+        padding: 20px 0 0 20px  
+    }
+    ul
+    {
+        
+        width:55%;
+        list-style-type: none;
+        padding: 20px;
+        margin: 0;
+    }
+    li
+    {
+        padding-bottom: 5px;
+        i{
+            padding-right: 10px;
+        }
+    }
+    
+}
