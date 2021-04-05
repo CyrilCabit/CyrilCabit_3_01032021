@@ -8,21 +8,24 @@ header p {
   font-size: 8vw;
   font-family: "logo", Arial, Helvetica, sans-serif;
   text-align: center;
+  font-weight: normal;
 }
 
 .btn {
   width: 100%;
   text-align: center;
-  padding: 15px 50px 50px 50px;
+  padding: 30px 0px 50px 0px;
   border: none;
 }
 .btn input {
+  min-width: 50%;
   border-radius: 30px;
   color: #fff;
   background-image: radial-gradient(circle at top, #FF79DA, #9356DC);
   padding: 15px;
   box-shadow: 0px 3px 6px darkgrey;
   border: black;
+  font-size: medium;
 }
 
 @font-face {
@@ -33,6 +36,10 @@ header p {
   font-family: "logo";
   src: url("/Polices/Shrikhand-Regular.otf");
 }
+* {
+  font-family: "texte";
+}
+
 body {
   width: 100%;
   margin: 0;
@@ -40,7 +47,8 @@ body {
 }
 
 img {
-  width: 55%;
+  width: 100%;
+  height: 30%;
   object-fit: cover;
 }
 
@@ -48,6 +56,7 @@ form {
   width: 100%;
   background-color: #e6e6e6;
   box-shadow: 0px -3px 6px darkgrey;
+  /* CSS PAGE ACCUEIL*/
 }
 form p {
   display: flex;
@@ -59,7 +68,6 @@ form input {
   background: transparent;
   width: auto;
   text-align: center;
-  font-weight: bold;
 }
 
 h2 {
@@ -71,11 +79,11 @@ h2 {
   background-color: #f2f2f2;
 }
 .section1 h1 {
-  margin: 25px 55px 25px 55px;
+  margin: 30px 40px 30px 40px;
   text-align: center;
 }
 .section1 .presentation {
-  margin: 25px;
+  margin: 30px 15px 20px 15px;
   text-align: center;
 }
 
@@ -99,7 +107,7 @@ h2 {
   justify-content: space-around;
   padding: 25px 35px 25px 25px;
   align-items: center;
-  box-shadow: 0px 3px 10px lightgrey;
+  box-shadow: 0px 3px 6px darkgrey;
   font-weight: bold;
 }
 .section2 ol li:hover {
@@ -124,17 +132,104 @@ h2 {
 }
 
 .section3 {
+  width: 100%;
   background-color: #f2f2f2;
+  padding: 20px 0px 40px 0px;
 }
 
 figure {
   margin: 20px;
   box-shadow: 10px 10px 10px #e3e3e3;
+  border-radius: 0px 0px 15px 15px;
 }
 figure img {
   width: 100%;
   height: 25%;
   border-radius: 15px 15px 0px 0px;
+}
+figure p:first-child {
+  background-color: #97eace;
+  color: #187747;
+  width: fit-content;
+  padding: 6px 10px 6px 10px;
+  position: relative;
+  top: 3em;
+  left: 68%;
+  margin: 0px;
+  text-align: center;
+}
+figure p {
+  margin: 0;
+}
+figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px 0px 15px 15px;
+}
+figure figcaption i {
+  font-size: 2em;
+  padding: 25px;
+  cursor: pointer;
+  color: red;
+}
+figure figcaption .cards__info {
+  margin: 0px 0px 10px 10px;
+}
+figure figcaption h3 {
+  margin: 10px 10px 10px 0px;
+}
+
+/* CSS PAGES MENU*/
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding-top: 20px;
+}
+.menu h1 {
+  margin: 20px 35px 0px 30px;
+  font-family: "logo", Arial, Helvetica, sans-serif;
+  font-size: 7vw;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.menu h2 {
+  width: fit-content;
+  margin: 40px 0px 0px 30px;
+  padding: 5px 0px 5px 0px;
+  font-weight: normal;
+  font-size: medium;
+  border-bottom: solid #99e2d0;
+}
+.menu ul {
+  padding-left: 0;
+}
+.menu ul li {
+  background-color: FFF;
+  margin: 20px;
+  border-radius: 20px;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 7px;
+  align-items: center;
+  box-shadow: 0px 3px 10px lightgrey;
+}
+.menu ul .choices {
+  display: inline;
+}
+.menu ul .menu__details {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px;
+  padding: 0;
+}
+.menu ul .menu__details p {
+  margin: 0;
+}
+.menu ul h3 {
+  margin: 7px;
 }
 
 footer {
@@ -151,6 +246,7 @@ footer p {
   font-family: "logo", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 20px 0 0 20px;
+  font-weight: normal;
 }
 footer ul {
   width: 55%;
