@@ -5,12 +5,12 @@
 @font-face
 {
     font-family: 'texte';
-    src: url('/Polices/Roboto-Regular.ttf');
+    src: url('../Polices/Roboto-Regular.ttf');
         
 }   
 @font-face{
     font-family: 'logo';
-    src: url('/Polices/Shrikhand-Regular.otf');
+    src: url('../Polices/Shrikhand-Regular.otf');
 }
 
 *
@@ -205,10 +205,12 @@ figure
     }
 }
         /* CSS PAGES MENU*/
-img
+
+.picture
 {
-     margin-bottom: -60px;
+    margin-bottom: -60px;
 }
+
 .menu
 {   background-color: $backgroung-light;
     border-radius: 40px 40px 0 0;

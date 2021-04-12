@@ -36,11 +36,11 @@ button {
 
 @font-face {
   font-family: "texte";
-  src: url("/Polices/Roboto-Regular.ttf");
+  src: url("../Polices/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "logo";
-  src: url("/Polices/Shrikhand-Regular.otf");
+  src: url("../Polices/Shrikhand-Regular.otf");
 }
 * {
   font-family: "texte";
@@ -196,7 +196,7 @@ figure figcaption h3 {
 }
 
 /* CSS PAGES MENU*/
-img {
+.picture {
   margin-bottom: -60px;
 }
 
