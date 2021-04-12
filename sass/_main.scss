@@ -35,7 +35,7 @@ img
 form 
 {
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: rgb(234, 234, 234);
     box-shadow: 0px -3px 6px darkgrey;
     p
     {
@@ -51,6 +51,8 @@ form
         background: transparent;
         width: auto;
         text-align: center;
+        font-weight: bold;
+        font-size: medium;
 
     }
         /* CSS PAGE ACCUEIL*/
@@ -59,11 +61,11 @@ h2
 {
     margin-left: 20px;
 }
-.section1
+.container-primary
 {
     width: 100%;
     background-color:#f2f2f2;
-    
+    padding-bottom: 50px;
     h1
     {
         margin: 30px 40px 30px 40px;
@@ -71,13 +73,13 @@ h2
     
         
     }
-    .presentation
+    .container-primary__presentation
     {
         margin: 30px 15px 20px 15px;
         text-align: center;
     }
 }
-.section2
+.container-secondary
 {   
     padding: 20px 0px 10px 0px; 
 
@@ -87,26 +89,26 @@ h2
         .list
         {
             width: 100%;
-            display: flex;
-            
+            display: flex; 
+            position: relative;          
         } 
 
         li
         {
-            width: 90%;
+            width: 100%;
             display: flex;
-            margin: 20px 30px 20px 10px;
+            margin: 20px 20px 5px 30px;
             border-radius: 20px;
             list-style-type: none;
-            background: #f2f2f2;
+            background: rgb(246, 246, 246);
             justify-content: space-around;
-            padding: 25px 35px 25px 25px;
+            padding: 25px 20px 25px 20px;
             align-items: center;
-            box-shadow: 0px 3px 6px darkgrey;;
+            box-shadow: 0px 3px 15px lightgrey;;
             font-weight: bold;
             &:hover
             {
-                background-color: #f4edfd;
+                background-color: rgb(245, 237, 255);
                 i
                 {
                     color:#9356DC;
@@ -117,14 +119,15 @@ h2
         }
         p
         {
-            position: relative;
-            left: 25px;
+            position: absolute;
+            left: 4%;
+            top: 25%;
             background-color: #9356DC;
             align-self: center;
             border: solid 1px;
             border-radius: 15px;
             padding: 5px 10px 5px 10px;
-            color: fff;
+            color: #FFFFFF;
         }
         i 
         {
@@ -138,7 +141,7 @@ h2
 
 }
 
-.section3
+.cards-container
 {
     
     width:100%;
@@ -150,24 +153,26 @@ figure
     margin: 20px;
     box-shadow: 10px 10px 10px #e3e3e3;
     border-radius: 0px 0px 15px 15px;
+    position: relative;
     img
     {
     width: 100%;
-    height: 25%;
+    height: 200px;
     border-radius: 15px 15px 0px 0px;
     }
 
     p:first-child
     {
         background-color: #97eace;
-        color: #187747;
+        color: rgb(38, 157, 128);
         width: fit-content;
         padding: 6px 10px 6px 10px;
-        position: relative;
-        top: 3em;
-        left: 68%;
+        position: absolute;
+        top: 5%;
+        left: 70%;
         margin: 0px;
         text-align: center;
+        font-weight: bold;
     }
     p
     {
@@ -184,7 +189,10 @@ figure
             font-size: 2em;
             padding: 25px;
             cursor: pointer;
-            color: red;
+            &:hover
+            {
+                background: linear-gradient(#FF79DA, #9356DC);
+            }
         }
         .cards__info
         {
@@ -197,10 +205,17 @@ figure
     }
 }
         /* CSS PAGES MENU*/
+img
+{
+     margin-bottom: -60px;
+}
 .menu
 {   background-color: $backgroung-light;
     border-radius: 40px 40px 0 0;
-    padding-top: 20px;
+    padding: 20px 0px 45px 0px;
+    position: relative;
+    
+    
     h1
     {
         margin: 20px 35px 0px 30px;
@@ -213,7 +228,7 @@ figure
     }
     h2
     {
-        width: fit-content;
+        width: 10%;
         margin: 40px 0px 0px 30px;
         padding: 5px 0px 5px 0px;
         font-weight: normal;
@@ -222,10 +237,12 @@ figure
     }
     ul
     {
+        width: 100%;
+        margin-bottom: 50px;
         padding-left: 0;
         li
         {
-            background-color:FFF;
+            background-color:#FFFFFF;
             margin: 20px;
             border-radius: 20px;
             list-style-type: none;

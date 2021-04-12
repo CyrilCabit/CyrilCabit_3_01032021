@@ -2,6 +2,8 @@ header
 {
     width: 100%;
     margin-top: 20px;
+    display:flex;
+    position: relative;
     p {
         width: 100%;
         margin: 0;
@@ -9,5 +11,13 @@ header
         font-family:'logo',Arial, Helvetica, sans-serif;
         text-align: center;
         font-weight: normal;
-    } 
+    }
+    i {
+        color: black;
+        position: absolute;
+        font-size: 5vw;
+        right: 90%;
+        top: 3%;
+    }  
+     
 }
