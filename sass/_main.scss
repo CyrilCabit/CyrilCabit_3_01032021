@@ -2,16 +2,7 @@
 @import "../sass/Components/Buttons";
 @import "../sass/Utils/variables";
 @import "../sass/Utils/mixins";
-@font-face
-{
-    font-family: 'texte';
-    src: url('./Polices/Roboto-Regular.ttf');
-        
-}   
-@font-face{
-    font-family: 'logo';
-    src: url('./Polices/Shrikhand-Regular.otf');
-}
+
 
 *
 {
@@ -187,11 +178,15 @@ figure
         i
         {
             font-size: 2em;
-            padding: 25px;
+            margin: 25px;
             cursor: pointer;
+            border-radius: 50%;
+            opacity: 0.1;
+           
             &:hover
             {
-                background: linear-gradient(#FF79DA, #9356DC);
+                background: linear-gradient(#FF79DA, #9356DC);       
+                opacity: 1;
             }
         }
         .cards__info

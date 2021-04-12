@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "texte";
+  src: url("Polices/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "logo";
+  src: url("Polices/Shrikhand-Regular.otf");
+}
 header {
   width: 100%;
   margin-top: 20px;
@@ -34,14 +42,6 @@ button {
   font-size: medium;
 }
 
-@font-face {
-  font-family: "texte";
-  src: url("../Polices/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "logo";
-  src: url("../Polices/Shrikhand-Regular.otf");
-}
 * {
   font-family: "texte";
 }
@@ -182,11 +182,14 @@ figure figcaption {
 }
 figure figcaption i {
   font-size: 2em;
-  padding: 25px;
+  margin: 25px;
   cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.1;
 }
 figure figcaption i:hover {
   background: linear-gradient(#FF79DA, #9356DC);
+  opacity: 1;
 }
 figure figcaption .cards__info {
   margin: 0px 0px 10px 10px;

@@ -1,4 +1,13 @@
-
+@font-face
+{
+    font-family: 'texte';
+    src: url('Polices/Roboto-Regular.ttf');
+        
+}   
+@font-face{
+    font-family: 'logo';
+    src: url('Polices/Shrikhand-Regular.otf');
+}
 @import "../sass/Layout/header","../sass/main","../sass/Layout/footer";
 
 
