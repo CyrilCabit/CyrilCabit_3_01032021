@@ -1,7 +1,5 @@
 
-@import "../sass/Components/Buttons";
-@import "../sass/Utils/variables";
-@import "../sass/Utils/mixins";
+@import "../sass/Components/Buttons","../sass/Utils/variables","../sass/Utils/mixins","../sass/Base/typography.scss";
 
 
 *
@@ -175,19 +173,24 @@ figure
         justify-content: space-between;
         align-items: center;
         border-radius: 0px 0px 15px 15px;
-        i
+        .far
         {
             font-size: 2em;
             margin: 25px;
             cursor: pointer;
-            border-radius: 50%;
-            opacity: 0.1;
-           
+            background-color: black;        
+            background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
             &:hover
             {
                 background: linear-gradient(#FF79DA, #9356DC);       
-                opacity: 1;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                font-weight: 900;
             }
+
         }
         .cards__info
         {
@@ -199,7 +202,7 @@ figure
         }
     }
 }
-        /* CSS PAGES MENU*/
+        /* CSS PAGES ANNEXES MENU*/
 
 .picture
 {

@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "texte";
-  src: url("https://cyrilcabit.github.io/CyrilCabit_3_01032021/Polices/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "logo";
-  src: url("https://cyrilcabit.github.io/CyrilCabit_3_01032021/Polices/Shrikhand-Regular.otf");
-}
 header {
   width: 100%;
   margin-top: 20px;
@@ -44,9 +36,17 @@ button {
 }
 button:hover {
   box-shadow: 0px 3px 6px black;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
+@font-face {
+  font-family: "texte";
+  src: url("https://cyrilcabit.github.io/CyrilCabit_3_01032021/Polices/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "logo";
+  src: url("https://cyrilcabit.github.io/CyrilCabit_3_01032021/Polices/Shrikhand-Regular.otf");
+}
 * {
   font-family: "texte";
 }
@@ -185,16 +185,21 @@ figure figcaption {
   align-items: center;
   border-radius: 0px 0px 15px 15px;
 }
-figure figcaption i {
+figure figcaption .far {
   font-size: 2em;
   margin: 25px;
   cursor: pointer;
-  border-radius: 50%;
-  opacity: 0.1;
+  background-color: black;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
-figure figcaption i:hover {
+figure figcaption .far:hover {
   background: linear-gradient(#FF79DA, #9356DC);
-  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
 figure figcaption .cards__info {
   margin: 0px 0px 10px 10px;
@@ -203,7 +208,7 @@ figure figcaption h3 {
   margin: 10px 10px 10px 0px;
 }
 
-/* CSS PAGES MENU*/
+/* CSS PAGES ANNEXES MENU*/
 .picture {
   margin-bottom: -60px;
 }
