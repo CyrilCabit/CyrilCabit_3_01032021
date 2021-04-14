@@ -209,6 +209,16 @@ figure figcaption h3 {
 }
 
 /* CSS PAGES ANNEXES MENU*/
+/*KEYFRAMES*/
+@keyframes apparition-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*FIN KEYFRAMES*/
 .picture {
   margin-bottom: -60px;
 }
@@ -240,6 +250,7 @@ figure figcaption h3 {
   width: 100%;
   margin-bottom: 50px;
   padding-left: 0;
+  animation: apparition-menu 3s;
 }
 .menu ul li {
   background-color: #FFFFFF;
