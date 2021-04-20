@@ -1,6 +1,5 @@
 header {
   width: 100%;
-  margin-top: 20px;
   display: flex;
   position: relative;
 }
@@ -67,7 +66,6 @@ form {
   width: 100%;
   background-color: #eaeaea;
   box-shadow: 0px -3px 6px darkgrey;
-  /* CSS PAGE ACCUEIL*/
 }
 form p {
   display: flex;
@@ -83,6 +81,57 @@ form input {
   font-size: medium;
 }
 
+/* CSS LOADER*/
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  position: fixed;
+  z-index: 1;
+  animation: loading 2000ms ease-in-out 3s;
+  animation-fill-mode: both;
+}
+.loader p {
+  font-family: "logo";
+  font-size: 8vw;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+.loader .loader__spinner {
+  width: 20vw;
+  height: 20vw;
+  border: solid 8px #eaeaea;
+  border-radius: 50%;
+  position: relative;
+  border-top: solid 8px #FF79DA;
+  animation: spin 1s linear;
+  animation-iteration-count: 5;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* CSS PAGE ACCUEIL*/
 h2 {
   margin-left: 20px;
 }
@@ -107,20 +156,14 @@ h2 {
 .container-secondary ol {
   padding: 0;
 }
-.container-secondary ol .list {
-  width: 100%;
-  display: flex;
-  position: relative;
-}
 .container-secondary ol li {
-  width: 100%;
   display: flex;
   margin: 20px 20px 5px 30px;
   border-radius: 20px;
   list-style-type: none;
   background: #f6f6f6;
   justify-content: space-around;
-  padding: 25px 20px 25px 20px;
+  padding: 10px 20px 10px 20px;
   align-items: center;
   box-shadow: 0px 3px 15px lightgrey;
   font-weight: bold;
@@ -131,14 +174,13 @@ h2 {
 .container-secondary ol li:hover i {
   color: #9356DC;
 }
-.container-secondary ol p {
+.container-secondary ol p:first-child {
   position: absolute;
   left: 4%;
-  top: 25%;
   background-color: #9356DC;
   align-self: center;
   border: solid 1px;
-  border-radius: 15px;
+  border-radius: 50%;
   padding: 5px 10px 5px 10px;
   color: #FFFFFF;
 }
@@ -185,16 +227,20 @@ figure figcaption {
   align-items: center;
   border-radius: 0px 0px 15px 15px;
 }
-figure figcaption .far {
+figure figcaption i {
   font-size: 2em;
   margin: 25px;
   cursor: pointer;
-  background-color: black;
+  position: relative;
+  background: black;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition-property: color, transform;
+  transition-duration: 1s;
+  transform-origin: bottom center;
 }
-figure figcaption .far:hover {
+figure figcaption i:hover {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
