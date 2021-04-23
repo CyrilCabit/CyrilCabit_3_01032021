@@ -1,5 +1,5 @@
 
-@import "../sass/Components/Buttons","../sass/Utils/variables","../sass/Utils/mixins","../sass/Base/typography.scss","../sass/Base/animations.scss";
+@import "../sass/Components/Buttons","../sass/Utils/variables","../sass/Utils/mixins","../sass/Base/typography","../sass/Base/animations";
 
 
 *
@@ -320,21 +320,16 @@ figure
             &:hover + i
             {
                display: block;
-               animation: slidein 100ms linear 200ms;
+               animation: slidein 500ms linear 200ms;
             }
-
-            
         }
         .menu__details
-        
-        
             {
                 display: flex;
                 justify-content: space-between;
                 margin-left: 7px;
                 padding: 0;
-                
-
+               
             }
             p
             {   
