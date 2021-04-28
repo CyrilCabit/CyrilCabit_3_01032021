@@ -6,7 +6,7 @@ header {
 header p {
   width: 100%;
   margin: 0;
-  font-size: 8vw;
+  font-size: 1.8rem;
   font-family: "logo", Arial, Helvetica, sans-serif;
   text-align: center;
   font-weight: normal;
@@ -14,9 +14,9 @@ header p {
 header i {
   color: black;
   position: absolute;
-  font-size: 5vw;
+  font-size: 1.25rem;
   right: 90%;
-  top: 3%;
+  top: 15%;
 }
 
 button {
@@ -82,16 +82,44 @@ button:hover {
 }
 @keyframes slidein {
   0% {
-    width: -1%;
+    width: 0%;
   }
   25% {
-    width: 1%;
+    width: 10%;
   }
   50% {
-    width: 2%;
+    width: 20%;
   }
   100% {
-    width: 3%;
+    width: 35%;
+  }
+}
+@keyframes slideout {
+  0% {
+    width: 35%;
+  }
+  25% {
+    width: 20%;
+  }
+  50% {
+    width: 10%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes heart {
+  0% {
+    height: 0px;
+  }
+  25% {
+    height: 7px;
+  }
+  50% {
+    height: 15px;
+  }
+  100% {
+    height: 30px;
   }
 }
 * {
@@ -140,12 +168,12 @@ form input {
   background: #f6f6f6;
   position: fixed;
   z-index: 1;
-  animation: loading 2000ms ease-in-out 3s;
+  animation: loading 2000ms ease-in-out 2s;
   animation-fill-mode: forwards;
 }
 .loader p {
   font-family: "logo";
-  font-size: 8vw;
+  font-size: 30px;
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
@@ -153,13 +181,13 @@ form input {
   font-weight: 900;
 }
 .loader .loader__spinner {
-  width: 20vw;
-  height: 20vw;
+  width: 50px;
+  height: 50px;
   border: solid 8px #eaeaea;
   border-radius: 50%;
   position: relative;
   border-top: solid 8px #FF79DA;
-  animation: spin 1s linear;
+  animation: spin 800ms linear;
   animation-iteration-count: 5;
 }
 
@@ -268,9 +296,6 @@ figure figcaption i {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition-property: color, transform;
-  transition-duration: 1s;
-  transform-origin: bottom center;
 }
 figure figcaption i:hover {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -278,9 +303,10 @@ figure figcaption i:hover {
   -webkit-background-clip: text;
   color: transparent;
   font-weight: 900;
+  animation: heart 1000ms linear;
 }
 figure figcaption .cards__info {
-  margin: 0px 0px 10px 10px;
+  margin: 10px;
 }
 figure figcaption h3 {
   margin: 10px 10px 10px 0px;
@@ -300,7 +326,7 @@ figure figcaption h3 {
 .menu h1 {
   margin: 20px 35px 0px 30px;
   font-family: "logo", Arial, Helvetica, sans-serif;
-  font-size: 7vw;
+  font-size: 1.5rem;
   font-weight: normal;
   text-align: center;
   display: flex;
@@ -309,6 +335,7 @@ figure figcaption h3 {
 .menu h2 {
   width: 10%;
   margin: 40px 0px 0px 30px;
+  margin-right: auto;
   padding: 5px 0px 5px 0px;
   font-weight: normal;
   font-size: medium;
@@ -318,57 +345,59 @@ figure figcaption h3 {
   width: 100%;
   margin-bottom: 50px;
   padding: 0;
-  animation: apparition-menu 3s;
+  animation: apparition-menu 4s;
 }
-.menu ul li {
+.menu ul .menu__card {
+  width: 95%;
+  height: 80px;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #FFFFFF;
-  margin: 20px 5px 20px 5px;
+  margin-bottom: 20px;
   border-radius: 20px;
   list-style-type: none;
-  justify-content: space-between;
   align-items: center;
   box-shadow: 0px 3px 10px lightgrey;
+  overflow: hidden;
 }
-.menu ul i {
-  display: none;
+.menu ul .menu__card:hover > .menu__card__check {
+  animation: slidein 300ms linear 200ms;
+  animation-fill-mode: both;
+}
+.menu ul .menu__card:hover > .menu__card__check i {
+  animation: checkrotate 300ms linear 200ms;
+}
+.menu ul .menu__card__details {
+  width: 100%;
+  margin: 0px;
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu ul .menu__card__details h3, .menu ul .menu__card__details p {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu ul .menu__card__price {
+  font-weight: bold;
+  padding: 15px;
+}
+.menu ul .menu__card__check {
+  display: flex;
+  height: inherit;
   background-color: #97eace;
   color: #FFFFFF;
   border-radius: 0px 20px 20px 0px;
-  padding: 25px 20px 25px 20px;
   font-size: 30px;
-}
-.menu ul i::before {
-  display: block;
-  animation: checkrotate 300ms linear 200ms;
-}
-.menu ul .menu__card {
-  width: 100%;
-  padding: 15px 15px 15px 5px;
-}
-.menu ul .menu__card:hover + i {
-  display: block;
-  animation: slidein 500ms linear 200ms;
-}
-.menu ul .menu__details {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 7px;
-  padding: 0;
-}
-.menu ul p {
-  margin: 0;
-  width: 82%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu ul p:last-child {
-  width: auto;
-  font-weight: bold;
-}
-.menu h3 {
-  margin: 0px 7px 7px 7px;
+  justify-content: center;
+  align-items: center;
+  animation: slideout 300ms linear 200ms;
+  animation-fill-mode: both;
 }
 
 footer {
