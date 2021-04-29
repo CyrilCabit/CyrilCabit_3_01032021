@@ -76,9 +76,12 @@
 {
     .container-secondary ol 
     {
-        width: 35%;
+        display: flex;        
         margin-left: auto;
         margin-right: auto;
+        li{
+            width: 100%;
+        }
     }
     .number
     {
@@ -131,9 +134,12 @@
 {
     .container-secondary ol 
     {
-        width: 35%;
+        display: flex;        
         margin-left: auto;
         margin-right: auto;
+        li{
+            width: 100%;
+        }
     }
     .number
     {
@@ -184,9 +190,13 @@
 {
     .container-secondary ol 
     {
-        width: 35%;
+        
+        display: flex;
         margin-left: auto;
         margin-right: auto;
+        li{
+            width: 100%;
+        }
     }
     .number
     {
