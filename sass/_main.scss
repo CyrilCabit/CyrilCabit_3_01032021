@@ -68,7 +68,7 @@ form
     {
         font-family: "logo";
         font-size: 30px;
-        background: linear-gradient(#FF79DA, #9356DC);       
+        background: linear-gradient($pink,$purple);       
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -81,7 +81,7 @@ form
         border: solid 8px rgb(234, 234, 234);
         border-radius: 50%;
         position: relative;
-        border-top: solid 8px #FF79DA;
+        border-top: solid 8px $pink;
         animation: spin 800ms linear;
         animation-iteration-count: 5;
     }
@@ -139,7 +139,7 @@ h2
                 height: 10px;
                 position: absolute;
                 
-                background-color: #9356DC;
+                background-color: $purple;
                 justify-content: center;
                 align-items: center;            
                 border: solid 1px;
@@ -152,7 +152,7 @@ h2
                 background-color: rgb(245, 237, 255);
                 i
                 {
-                    color:#9356DC;
+                    color:$purple;
                 }
             }
             
@@ -190,7 +190,7 @@ figure
 
     p:first-child
     {
-        background-color: #97eace;
+        background-color: $mint;
         color: rgb(38, 157, 128);
         width: fit-content;
         padding: 6px 10px 6px 10px;
@@ -221,9 +221,6 @@ figure
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            
-            
-            
              &:hover
             {
                 background: linear-gradient(#FF79DA, #9356DC);       
@@ -232,10 +229,7 @@ figure
                 color: transparent;
                 font-weight: 900;
                 animation: heart 1000ms linear;
-                
-
             }
-
         }
         .cards__info
         {
@@ -280,13 +274,13 @@ figure
         padding: 5px 0px 5px 0px;
         font-weight: normal;
         font-size: medium;
-        border-bottom: solid rgb(153, 226, 208);
+        border-bottom: solid $mint;
     }
     ul
     {
         margin-bottom: 50px;
         padding: 0;        
-        animation: apparition-menu 4s;
+        animation: apparition-menu 3s;
        
         .menu__card
         {
@@ -305,7 +299,7 @@ figure
             
             &:hover > .menu__card__check 
             {
-               
+              
                animation: slidein 300ms linear 200ms;
                animation-fill-mode: both;
                i{
@@ -340,9 +334,10 @@ figure
         }
         .menu__card__check               
         {   
-            display: flex;            
-            height: inherit;
-            background-color: #97eace;
+            display: flex; 
+                    
+            height: inherit;            
+            background-color: $mint;
             color: #FFFFFF;
             border-radius: 0px 20px 20px 0px;
             font-size: 30px;
@@ -350,6 +345,7 @@ figure
             align-items: center;
             animation: slideout 300ms linear 200ms;
             animation-fill-mode: both;
+            width: 0%;
         }
       
     }

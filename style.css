@@ -258,10 +258,10 @@ button:hover {
   }
 }
 @keyframes apparition-menu {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -536,12 +536,12 @@ figure figcaption h3 {
   padding: 5px 0px 5px 0px;
   font-weight: normal;
   font-size: medium;
-  border-bottom: solid #99e2d0;
+  border-bottom: solid #97eace;
 }
 .menu ul {
   margin-bottom: 50px;
   padding: 0;
-  animation: apparition-menu 4s;
+  animation: apparition-menu 3s;
 }
 .menu ul .menu__card {
   width: 95%;
@@ -594,6 +594,7 @@ figure figcaption h3 {
   align-items: center;
   animation: slideout 300ms linear 200ms;
   animation-fill-mode: both;
+  width: 0%;
 }
 
 footer {
